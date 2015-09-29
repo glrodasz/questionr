@@ -1,0 +1,22 @@
+{
+  "name": "backbone-list",
+  "version": "1.0.0",
+  "description": "A backbone list example",
+  "main": "dist/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "webpack -dw"
+  },
+  "author": "Guillermo Rodas <hello@rioth.me>",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.9.6",
+    "browser-sync-webpack-plugin": "^1.0.0",
+    "webpack": "^1.12.2"
+  },
+  "dependencies": {
+    "backbone": "^1.2.3",
+    "jquery": "^2.1.4",
+    "underscore": "^1.8.3"
+  }
+}
