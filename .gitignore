@@ -27,9 +27,3 @@ build/Release
 node_modules
 
 bower_components
-<<<<<<< HEAD
-=======
-
-dist
-!dist/index.html
->>>>>>> f08f5098e96bce6d2770a4a20a42fd8e1e7d86f2
