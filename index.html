@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Backbone List</title>
+</head>
+<body>
+
+<div class="question-app"></div>
+
+<script type="text/template" id="question-template" class="template">
+  <div class="container-fluid">
+    <div class="row">
+      <% if (image != null) { %>
+        <div class="col-sm-6">
+          <div class="question-image-container">
+            <img class="question-image" src="<%= image %>" alt="<%= name %>">
+          </div>
+        </div>
+      <% } %>
+      <% if (image != null) { %>
+        <div class="col-sm-6">
+      <% } else {%>
+        <div class="col-sm-12">
+      <% } %>
+        <p class="question-summary"> <%= description %> </p>
+        <div class="question-answers">
+          <% _.each( answersList.toJSON(), function( answer ){ %>
+            <% if (multiple) { %>
+              <div class="checkbox">
+                <label>
+                  <input class="question-answers__input" type="checkbox" value="<%= answer.value %>">
+                  <%= answer.description %>
+                </label>
+              </div>
+            <% } else {%>
+              <div class="radio">
+                <label>
+                  <input class="question-answers__input" name="<%= name %>" type="radio" value="<%= answer.value %>">
+                  <%= answer.description %>
+                </label>
+              </div>
+            <% } %>
+          <% }); %>
+        </div>
+      </div>
+    </div>
+  </div>
+</script>
+
+<script src="dist/main.js"></script>
+
+</body>
+</html>

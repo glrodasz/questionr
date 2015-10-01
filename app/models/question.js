@@ -4,6 +4,7 @@ var Backbone = require('backbone'),
 
 module.exports = Backbone.Model.extend({
   defaults: {
+    name: '',
     image: '',
     description: '',
     multiple: false,
@@ -17,6 +18,11 @@ module.exports = Backbone.Model.extend({
         description: 'Respuesta generica 2',
         value: 0,
         checked: false
+      },
+      {
+        description: 'Respuesta generica 3',
+        value: 0,
+        checked: false
       }
     ])
   },
@@ -25,7 +31,7 @@ module.exports = Backbone.Model.extend({
     var answersList = this.get('answersList'),
       defaultAnswersList = this.defaults.answersList.toJSON();
 
-    if(options && options.answersList) {
+    if(options && options.answersList && options.multiple) {
       answersList.reset(_.uniq(_.union(answersList.toJSON(), defaultAnswersList), false, _.property('description')));
     }
   }
