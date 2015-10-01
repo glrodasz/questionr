@@ -12,9 +12,14 @@ module.exports = Backbone.View.extend({
   },
 
   initialize: function() {
-    this.listenTo(this.questionList, 'reset', this.render);
-
+    // Variables
     this.questionIndex = 0;
+
+    // DOM elements
+    this.$prev = this.$("#prev-button");
+    this.$next = this.$("#next-button");
+    this.$finish = this.$("#finish-button");
+
     this.questionList = new QuestionList([
       {
         'name': 'c1',
@@ -94,9 +99,58 @@ module.exports = Backbone.View.extend({
       }
     ]);
 
+    this.questionMaxIndex = this.questionList.size() - 1;
     this.render();
+    //this.logQuestionList();
+  },
 
-    // TODO Remover
+  render: function() {
+    this.setCurrentQuestion();
+    this.renderQuestion();
+    this.renderButtons();
+  },
+
+  renderButtons: function() {
+    if (this.questionIndex <= 0) {
+      this.$prev.hide();
+    } else if (this.questionIndex >= this.questionMaxIndex) {
+      this.$next.hide();
+      this.$finish.show();
+    } else {
+      this.$prev.show();
+      this.$next.show();
+      this.$finish.hide();
+    }
+  },
+
+  renderQuestion: function(question) {
+    this.currentQuestionView = new QuestionView({ model: this.currentQuestion });
+    this.$('.question').html(this.currentQuestionView.render().el);
+  },
+
+  setCurrentQuestion: function() {
+    this.currentQuestion = this.questionList.at(this.questionIndex);
+  },
+
+  getNext: function() {
+    if (this.questionIndex < this.questionMaxIndex) {
+      this.questionIndex++;
+      this.render();
+    } else {
+      this.questionIndex = this.questionMaxIndex;
+    }
+  },
+
+  getPrev: function() {
+    if (this.questionIndex > 0) {
+      this.questionIndex--;
+      this.render();
+    } else {
+      this.questionIndex = 0;
+    }
+  },
+
+  logQuestionList: function() {
     this.questionList.forEach(function(question) {
       var answersList = question.get('answersList');
 
@@ -108,23 +162,5 @@ module.exports = Backbone.View.extend({
         });
       }
     });
-  },
-
-  render: function() {
-    this.currentQuestion = this.questionList.at(this.questionIndex);
-    this.renderQuestion();
-  },
-
-  renderQuestion: function(question) {
-    this.currentQuestionView = new QuestionView({ model: this.currentQuestion });
-    this.$el.html(this.currentQuestionView.render().el);
-  },
-
-  getNext: function() {
-
-  },
-
-  getPrev: function() {
-
   }
 });
