@@ -21,7 +21,8 @@ module.exports = Backbone.View.extend({
     return this;
   },
 
-  markAnswer: function() {
-    console.log('Answer marked');
+  markAnswer: function(e) {
+    var cid = $(e.currentTarget).data('id');
+    this.model.get('answersList').get(cid).toggle();
   }
 });
