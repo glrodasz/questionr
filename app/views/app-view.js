@@ -136,6 +136,7 @@ module.exports = Backbone.View.extend({
     if (this.questionIndex < this.questionMaxIndex) {
       this.questionIndex++;
       this.render();
+      this.saveScore();
     } else {
       this.questionIndex = this.questionMaxIndex;
     }
@@ -145,9 +146,20 @@ module.exports = Backbone.View.extend({
     if (this.questionIndex > 0) {
       this.questionIndex--;
       this.render();
+      this.saveScore();
     } else {
       this.questionIndex = 0;
     }
+  },
+
+  saveScore: function() {
+    var totalScoreSum = 0;
+
+    totalScoreSum = this.questionList.reduce(function(memo, question) {
+      return memo + question.getScore();
+    }, 0);
+
+    console.log('SCORE', totalScoreSum);
   },
 
   logQuestionList: function() {

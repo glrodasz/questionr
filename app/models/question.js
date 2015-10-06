@@ -34,5 +34,11 @@ module.exports = Backbone.Model.extend({
     if(options && options.answersList && options.multiple) {
       answersList.reset(_.uniq(_.union(answersList.toJSON(), defaultAnswersList), false, _.property('description')));
     }
+  },
+
+  getScore: function() {
+    return this.get('answersList').reduce(function(memo, answer) {
+      return memo + (answer.get("checked") ? answer.get("value") : 0);
+    }, 0);
   }
 });
