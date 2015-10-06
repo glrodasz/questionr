@@ -32,7 +32,18 @@ module.exports = Backbone.Model.extend({
       defaultAnswersList = this.defaults.answersList.toJSON();
 
     if(options && options.answersList && options.multiple) {
-      answersList.reset(_.uniq(_.union(answersList.toJSON(), defaultAnswersList), false, _.property('description')));
+      answersList.reset(
+        _.shuffle(
+          _.uniq(
+            _.union(
+              answersList.toJSON(),
+              defaultAnswersList
+            ),
+            false,
+            _.property('description')
+          )
+        )
+      );
     }
   },
 
