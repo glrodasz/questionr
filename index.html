@@ -2,51 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Backbone List</title>
+  <title>Questions</title>
 </head>
 <body>
 
-<div class="question-app">
-  <section class="question"></section>
-  <button id="prev-button" class="prev">Prev</button>
-  <button id="next-button" class="next">Next</button>
-</div>
+<main class="container">
+  <div class="panel panel-default question">
+    <section class="question__content"></section>
+    <div class="panel-footer question__footer">
+      <span class="question__footer__counter">1/10</span>
+      <button id="prev-button" class="prev btn btn-default">Prev</button>
+      <button id="next-button" class="next btn btn-default">Next</button>
+    </div>
+  </div>
+</main>
 
 <script type="text/template" id="question-template" class="template">
-  <div class="row">
-      <% if (image != null) { %>
-        <div class="col-sm-6">
-          <div class="question-image-container">
-            <img class="question-image" src="<%= image %>" alt="<%= name %>">
-          </div>
+  <div class="panel-heading question__content__heading"
+    <% if (image != null) { %>
+      style="background: url('<%= image %>') center center no-repeat;
+        background-size: cover;"
+    <% } %>>
+    <h2 class="question__content__heading__title"><%= description %></h2>
+  </div>
+  <div class="panel-body question__content__body">
+    <% _.each( answersList.toJSON(), function( answer ){ %>
+      <% if (multiple) { %>
+        <div class="checkbox">
+          <label>
+            <input data-id="<%= answer.cid %>" class="question-answers__input" type="checkbox" value="<%= answer.value %>" <% if (answer.checked) { %>checked<% } %>>
+            <%= answer.description %>
+          </label>
         </div>
-      <% } %>
-      <% if (image != null) { %>
-        <div class="col-sm-6">
       <% } else {%>
-        <div class="col-sm-12">
-      <% } %>
-        <p class="question-summary"> <%= description %> </p>
-        <div class="question-answers">
-          <% _.each( answersList.toJSON(), function( answer ){ %>
-            <% if (multiple) { %>
-              <div class="checkbox">
-                <label>
-                  <input data-id="<%= answer.cid %>" class="question-answers__input" type="checkbox" value="<%= answer.value %>" <% if (answer.checked) { %>checked<% } %>>
-                  <%= answer.description %>
-                </label>
-              </div>
-            <% } else {%>
-              <div class="radio">
-                <label>
-                  <input data-id="<%= answer.cid %>" class="question-answers__input" name="<%= name %>" type="radio" value="<%= answer.value %>" <% if (answer.checked) { %>checked<% } %>>
-                  <%= answer.description %>
-                </label>
-              </div>
-            <% } %>
-          <% }); %>
+        <div class="radio">
+          <label>
+            <input data-id="<%= answer.cid %>" class="question-answers__input" name="<%= name %>" type="radio" value="<%= answer.value %>" <% if (answer.checked) { %>checked<% } %>>
+            <%= answer.description %>
+          </label>
         </div>
-      </div>
+      <% } %>
+    <% }); %>
   </div>
 </script>
 

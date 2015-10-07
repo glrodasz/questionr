@@ -4,8 +4,8 @@ var Backbone = require('backbone'),
 
 module.exports = Backbone.Model.extend({
   defaults: {
-    name: '',
-    image: '',
+    name: null,
+    image: null,
     description: '',
     multiple: false,
     answersList: new AnswerList([

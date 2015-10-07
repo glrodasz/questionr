@@ -4,7 +4,7 @@ var Backbone = require('backbone'),
   AnswerList = require('../collections/answer-list');
 
 module.exports = Backbone.View.extend({
-  el: '.question-app',
+  el: '.question',
 
   events: {
     'click .prev': 'getPrev',
@@ -23,7 +23,7 @@ module.exports = Backbone.View.extend({
     this.questionList = new QuestionList([
       {
         'name': 'c1',
-        'image': '',
+        'image': 'https://placeimg.com/640/480/nature',
         'description': 'Si me quedo sin agua en el desierto, ¿Que puedo hacer?',
         'multiple': false,
         'answersList': new AnswerList([
@@ -35,7 +35,7 @@ module.exports = Backbone.View.extend({
       },
       {
         'name': 'c2',
-        'image': '',
+        'image': 'https://placeimg.com/640/480/nature',
         'description': '¿Cuantas tasas de cafe se puede tomar uno sin morir?',
         'multiple': false,
         'answersList': new AnswerList([
@@ -55,7 +55,7 @@ module.exports = Backbone.View.extend({
       },
       {
         'name': 'e1',
-        'image': 'cielo.png',
+        'image': 'https://placeimg.com/640/480/nature',
         'description': '¿De que color es el cielo?',
         'multiple': true,
         'answersList': new AnswerList([
@@ -83,7 +83,6 @@ module.exports = Backbone.View.extend({
       },
       {
         'name': 'e2',
-        'image': 'luna.png',
         'description': '¿Que tan lejos queda la luna?',
         'multiple': true,
         'answersList': new AnswerList([
@@ -125,7 +124,7 @@ module.exports = Backbone.View.extend({
 
   renderQuestion: function(question) {
     this.currentQuestionView = new QuestionView({ model: this.currentQuestion });
-    this.$('.question').html(this.currentQuestionView.render().el);
+    this.$('.question__content').html(this.currentQuestionView.render().el);
   },
 
   setCurrentQuestion: function() {
