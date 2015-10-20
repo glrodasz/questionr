@@ -7,13 +7,13 @@
 <body>
 
 <main class="container">
-  <div class="panel panel-default question">
-    <section class="question__content"></section>
-    <div class="panel-footer question__footer">
+  <div class="question panel panel-default">
+    <div class="question__content"></div>
+    <div class="question__footer panel-footer clearfix">
       <span class="question__footer__counter">1/10</span>
-      <div class="question__footer__buttons">
-        <button id="prev-button" class="prev btn btn-default">Prev</button>
-        <button id="next-button" class="next btn btn-default">Next</button>
+      <div class="question__footer__buttons-container">
+        <button id="prev-button" class="prev question-btn btn btn-default">Prev</button>
+        <button id="next-button" class="next question-btn btn btn-default">Next</button>
       </div>
     </div>
   </div>
@@ -33,14 +33,14 @@
         <div class="checkbox">
           <label>
             <input data-id="<%= answer.cid %>" class="question-answers__input" type="checkbox" value="<%= answer.value %>" <% if (answer.checked) { %>checked<% } %>>
-            <%= answer.description %>
+            <span class="question__content__body__text"><%= answer.description %></span>
           </label>
         </div>
       <% } else {%>
         <div class="radio">
           <label>
             <input data-id="<%= answer.cid %>" class="question-answers__input" name="<%= name %>" type="radio" value="<%= answer.value %>" <% if (answer.checked) { %>checked<% } %>>
-            <%= answer.description %>
+            <span class="question__content__body__text"><%= answer.description %></span>
           </label>
         </div>
       <% } %>
