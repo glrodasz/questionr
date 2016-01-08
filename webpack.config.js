@@ -27,7 +27,7 @@ module.exports = {
       },
       {
         test: /\.woff(2)?$/,
-        loader: 'url-loader?limit=10000&minetype=application/font-woff'
+        loader: 'url?limit=10000&minetype=application/font-woff'
       },
       {
         test: /\.(ttf|eot|svg)(2)?$/,
