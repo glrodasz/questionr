@@ -1,1 +1,1 @@
-# Backbone + ES6 + Webpack
+# Backbone + Webpack + ES6
