@@ -1,9 +1,7 @@
-require('./styles/main.scss');
+import './styles/main.scss';
+import $ from 'jquery';
+import AppView from './views/app-view';
 
-var $ = require('jquery'),
-  appView = require('./views/app-view');
-
-$(function() {
-  'use strict';
-  new appView();
+$(() => {
+  new AppView();
 });

@@ -1,9 +1,8 @@
-var Backbone = require('backbone'),
-  $ = require('jquery'),
-  _ = require('underscore');
+import Backbone from 'backbone';
+import $ from 'jquery';
+import _ from 'underscore';
 
-
-module.exports = Backbone.View.extend({
+const QuestionView = Backbone.View.extend({
   tagName: 'article',
 
   template: _.template($('#question-template').html()),
@@ -12,13 +11,15 @@ module.exports = Backbone.View.extend({
     'click input': 'markAnswer'
   },
 
-  render: function() {
+  render() {
     this.$el.html(this.template(this.model.toJSON()));
     return this;
   },
 
-  markAnswer: function(e) {
-    var cid = $(e.currentTarget).data('id');
+  markAnswer(event) {
+    const cid = $(event.currentTarget).data('id');
     this.model.get('answersList').get(cid).toggle();
   }
 });
+
+export default QuestionView;

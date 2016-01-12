@@ -1,15 +1,14 @@
-const
-  // Modules
-  path = require('path'),
+// Modules
+const path = require('path');
 
-  // Webpack plugins
-  BrowserSyncPlugin = require('browser-sync-webpack-plugin'),
-  ExtractTextPlugin = require('extract-text-webpack-plugin'),
-  CleanPlugin = require('clean-webpack-plugin');
+// Webpack plugins
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CleanPlugin = require('clean-webpack-plugin');
 
-  // Constans
-  APP_DIR = path.resolve(__dirname, 'app'),
-  DIST_DIR = path.resolve(__dirname, 'dist');
+// Constans
+const APP_DIR = path.resolve(__dirname, 'app');
+const DIST_DIR = path.resolve(__dirname, 'dist');
 
 module.exports = {
   context: APP_DIR,
@@ -27,11 +26,15 @@ module.exports = {
       },
       {
         test: /\.woff(2)?$/,
-        loader: 'url?limit=10000&minetype=application/font-woff'
+        loader: 'url',
+        query: {
+          limit: 10000,
+          minetype: 'application/font-woff'
+        }
       },
       {
         test: /\.(ttf|eot|svg)(2)?$/,
-        loader: "file-loader"
+        loader: "file"
       },
       {
         test: /\.scss$/,

@@ -1,14 +1,14 @@
-var Backbone = require('backbone'),
-  _ = require('underscore');
+import Backbone from 'backbone';
+import _ from 'underscore';
 
-module.exports = Backbone.Model.extend({
+const Answer = Backbone.Model.extend({
   defaults: {
     description: '',
     value: 0,
     checked: false
   },
 
-  toggle: function() {
+  toggle() {
     if (this.get('checked')) {
       this.set('checked', false);
     } else {
@@ -16,9 +16,11 @@ module.exports = Backbone.Model.extend({
     }
   },
 
-  toJSON: function() {
-    var attributes = _.clone(this.attributes);
+  toJSON() {
+    const attributes = _.clone(this.attributes);
     attributes.cid = this.cid;
     return attributes;
   }
 });
+
+export default Answer;

@@ -1,8 +1,8 @@
-var Backbone = require('backbone'),
-  AnswerList = require('../collections/answer-list'),
-  _ = require('underscore');
+import Backbone from 'backbone';
+import AnswerList from '../collections/answer-list';
+import _ from 'underscore';
 
-module.exports = Backbone.Model.extend({
+const Question = Backbone.Model.extend({
   defaults: {
     name: null,
     image: null,
@@ -10,28 +10,34 @@ module.exports = Backbone.Model.extend({
     multiple: false,
     answersList: new AnswerList([
       {
-        description: 'Respuesta generica 1',
+        description: 'Black',
         value: 0,
         checked: false
       },
       {
-        description: 'Respuesta generica 2',
+        description: 'White',
         value: 0,
         checked: false
       },
       {
-        description: 'Respuesta generica 3',
+        description: 'Yellow',
         value: 0,
         checked: false
       }
     ])
   },
 
-  initialize: function(options) {
-    var answersList = this.get('answersList'),
-      defaultAnswersList = this.defaults.answersList.toJSON();
+  initialize(options) {
+    const answersList = this.get('answersList');
+    const defaultAnswersList = this.defaults.answersList.toJSON();
 
-    if(options && options.answersList && options.multiple) {
+    /**
+     *  If the Question has multiple selection the idea here is make a shuffle
+     *  with the default answers and answers passed as parameter. The trick is
+     *  that if the answers passed as parameter has the same description of any
+     *  default answer it will be overrided with the value passed as parameter.
+     */
+    if (options && options.answersList && options.multiple) {
       answersList.reset(
         _.shuffle(
           _.uniq(
@@ -47,9 +53,11 @@ module.exports = Backbone.Model.extend({
     }
   },
 
-  getScore: function() {
-    return this.get('answersList').reduce(function(memo, answer) {
-      return memo + (answer.get("checked") ? answer.get("value") : 0);
+  getScore() {
+    return this.get('answersList').reduce((memo, answer) => {
+      return memo + (answer.get('checked') ? answer.get('value') : 0);
     }, 0);
   }
 });
+
+export default Question;

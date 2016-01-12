@@ -24,7 +24,7 @@ body {
 }
 
 .question__footer__counter {
-  color: $wetAsphalt;
+  color: $wet-asphalt;
   text-shadow: 1px 1px 0 rgba(black, 0.1);
   font-weight: bold;
   float: left;
@@ -37,9 +37,9 @@ body {
   color: $clouds;
   font-size: 22px;
   font-weight: bold;
-  text-shadow: 1px 1px 1px $wetAsphalt;
+  text-shadow: 1px 1px 1px $wet-asphalt;
   min-height: 150px;
-  background: $midnightBlue;
+  background: $midnight-blue;
   z-index: 1;
 
   &::before {
@@ -49,7 +49,7 @@ body {
     right: 0;
     bottom: 0;
     top: 0;
-    background: rgba($midnightBlue, 0.8);
+    background: rgba($midnight-blue, 0.8);
     z-index: -1;
     border-radius: 0;
   }
@@ -66,7 +66,7 @@ body {
   vertical-align: middle;
   display: inline-block;
   font-size: 16px;
-  color: $midnightBlue;
+  color: $midnight-blue;
   text-shadow: 1px 1px 0 rgba(black, 0.1);
 }
 
@@ -77,15 +77,33 @@ body {
 .question-btn {
   border: none;
   color: $clouds;
-  background: $peterRiver;
+  background: $peter-river;
   border-radius: 2px;
   padding: 8px 20px;
   font-weight: bold;
   text-transform: uppercase;
-  box-shadow: 1px 1px 3px rgba($midnightBlue, 0.4);
+  box-shadow: 1px 1px 3px rgba($midnight-blue, 0.4);
 
   &:hover, &:active, &:focus, &:active:focus {
     color: $clouds;
-    background: mix(white, $peterRiver, 20%);
+    background: mix(white, $peter-river, 20%);
+  }
+}
+
+.question-btn--success {
+  background: $nephritis;
+
+  &:hover, &:active, &:focus, &:active:focus {
+    color: $clouds;
+    background: mix(white, $nephritis, 20%);
+  }
+}
+
+.question-btn--warning {
+  background: $alizarin;
+
+  &:hover, &:active, &:focus, &:active:focus {
+    color: $clouds;
+    background: mix(white, $alizarin, 20%);
   }
 }

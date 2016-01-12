@@ -1,7 +1,6 @@
-var Backbone = require('backbone'),
-  _ = require('underscore'),
-  Answer = require('../models/answer');
+import Backbone from 'backbone';
+import Answer from '../models/answer';
 
-module.exports = Backbone.Collection.extend({
-  model: Answer
-});
+const AnswerList = Backbone.Collection.extend({ model: Answer });
+
+export default AnswerList;

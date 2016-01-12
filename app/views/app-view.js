@@ -1,9 +1,9 @@
-var Backbone = require('backbone'),
-  QuestionList = require('../collections/question-list'),
-  QuestionView = require('../views/question-view'),
-  AnswerList = require('../collections/answer-list');
+import Backbone from 'backbone';
+import QuestionList from '../collections/question-list';
+import QuestionView from '../views/question-view';
+import questionListData from '../data/question-list-data';
 
-module.exports = Backbone.View.extend({
+const AppView = Backbone.View.extend({
   el: '.question',
 
   events: {
@@ -11,105 +11,26 @@ module.exports = Backbone.View.extend({
     'click .next': 'getNext'
   },
 
-  initialize: function() {
-    // Variables
+  initialize() {
     this.questionIndex = 0;
 
-    // DOM elements
-    this.$prev = this.$("#prev-button");
-    this.$next = this.$("#next-button");
-    this.$finish = this.$("#finish-button");
+    this.$prev = this.$('#prev-button');
+    this.$next = this.$('#next-button');
+    this.$finish = this.$('#finish-button');
 
-    this.questionList = new QuestionList([
-      {
-        'name': 'c1',
-        'image': 'https://placeimg.com/640/480/nature',
-        'description': 'Si me quedo sin agua en el desierto, ¿Que puedo hacer?',
-        'multiple': false,
-        'answersList': new AnswerList([
-          {
-            'description': 'Beber de un cactus',
-            'value': 2
-          }
-        ])
-      },
-      {
-        'name': 'c2',
-        'image': 'https://placeimg.com/640/480/nature',
-        'description': '¿Cuantas tasas de cafe se puede tomar uno sin morir?',
-        'multiple': false,
-        'answersList': new AnswerList([
-          {
-          'description': '98',
-            'value': 0
-          },
-          {
-            'description': '27',
-            'value': 30
-          },
-          {
-            'description': '52',
-            'value': 0
-          }
-        ])
-      },
-      {
-        'name': 'e1',
-        'image': 'https://placeimg.com/640/480/nature',
-        'description': '¿De que color es el cielo?',
-        'multiple': true,
-        'answersList': new AnswerList([
-          {
-            'description': 'Azul',
-            'value': 6
-          },
-          {
-            'description': 'Morado',
-            'value': 6
-          },
-          {
-            'description': 'Blanco',
-            'value': 6
-          },
-          {
-            'description': 'No tiene color',
-            'value': 2
-          },
-          {
-            'description': 'Respuesta generica 2',
-            'value': 20
-          }
-        ])
-      },
-      {
-        'name': 'e2',
-        'description': '¿Que tan lejos queda la luna?',
-        'multiple': true,
-        'answersList': new AnswerList([
-          {
-            'description': '100 KM',
-            'value': 6
-          },
-          {
-            'description': '0.5 años luz',
-            'value': 6
-          }
-        ])
-      }
-    ]);
+    this.questionList = new QuestionList(questionListData);
 
     this.questionMaxIndex = this.questionList.size() - 1;
     this.render();
-    //this.logQuestionList();
   },
 
-  render: function() {
+  render() {
     this.setCurrentQuestion();
     this.renderQuestion();
     this.renderButtons();
   },
 
-  renderButtons: function() {
+  renderButtons() {
     if (this.questionIndex <= 0) {
       this.$prev.hide();
     } else if (this.questionIndex >= this.questionMaxIndex) {
@@ -122,16 +43,20 @@ module.exports = Backbone.View.extend({
     }
   },
 
-  renderQuestion: function(question) {
+  renderQuestion() {
     this.currentQuestionView = new QuestionView({ model: this.currentQuestion });
-    this.$('.question__content').html(this.currentQuestionView.render().el);
+
+    this.$('.question__content')
+      .html(this.currentQuestionView.render().el);
+    this.$('.question__footer__counter')
+      .text(`${this.questionIndex + 1}/${this.questionMaxIndex + 1}`);
   },
 
-  setCurrentQuestion: function() {
+  setCurrentQuestion() {
     this.currentQuestion = this.questionList.at(this.questionIndex);
   },
 
-  getNext: function() {
+  getNext() {
     if (this.questionIndex < this.questionMaxIndex) {
       this.questionIndex++;
       this.render();
@@ -141,7 +66,7 @@ module.exports = Backbone.View.extend({
     }
   },
 
-  getPrev: function() {
+  getPrev() {
     if (this.questionIndex > 0) {
       this.questionIndex--;
       this.render();
@@ -151,27 +76,13 @@ module.exports = Backbone.View.extend({
     }
   },
 
-  saveScore: function() {
-    var totalScoreSum = 0;
-
-    totalScoreSum = this.questionList.reduce(function(memo, question) {
+  saveScore() {
+    const totalScoreSum = this.questionList.reduce((memo, question) => {
       return memo + question.getScore();
     }, 0);
 
-    console.log('SCORE', totalScoreSum);
-  },
-
-  logQuestionList: function() {
-    this.questionList.forEach(function(question) {
-      var answersList = question.get('answersList');
-
-      console.log('\nQuestion:', question.get('description'));
-
-      if (answersList) {
-        answersList.forEach(function(answer) {
-          console.log('\tAnswer:', answer.get('description'), ', Value:', answer.get('value'));
-        });
-      }
-    });
+    localStorage.setItem('score', totalScoreSum);
   }
 });
+
+export default AppView;
