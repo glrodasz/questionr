@@ -2,7 +2,7 @@
 
 This is an example of a "Questions and answers" application using Backbone.js and Webpack written with ES6 syntax.
 
-![Backbone ES6 Webpack](media/screenshot.png)
+<img src="media/screenshot.png" alt="alt text" width="600px">
 
 ## Install and preview
 - Run the following command in the repository folder: ```npm i && npm run serve```
