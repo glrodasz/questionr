@@ -1,5 +1,5 @@
 {
-  "name": "backbone-webpack",
+  "name": "questionr",
   "version": "2.0.0",
   "description": "This is an example of a \"Questions and answers\" application using Backbone and Webpack written with ES6 syntax.",
   "main": "dist/main.js",
