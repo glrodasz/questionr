@@ -4,7 +4,7 @@
   "description": "This is an example of a \"Questions and answers\" application using Backbone and Webpack written with ES6 syntax.",
   "main": "dist/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "serve .",
     "serve": "webpack -dw",
     "build": "webpack -d"
   },
@@ -33,6 +33,7 @@
     "backbone": "^1.2.3",
     "bootstrap-sass": "^3.3.5",
     "jquery": "^2.1.4",
+    "serve": "^10.1.1",
     "underscore": "^1.8.3"
   }
 }
