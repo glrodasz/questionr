@@ -34,6 +34,7 @@
     "bootstrap-sass": "^3.3.5",
     "jquery": "^2.1.4",
     "serve": "^10.1.1",
+    "sweetalert": "^2.1.2",
     "underscore": "^1.8.3"
   }
 }
