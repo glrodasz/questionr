@@ -2,6 +2,7 @@ import Backbone from 'backbone';
 import QuestionList from '../collections/question-list';
 import QuestionView from '../views/question-view';
 import questionListData from '../data/question-list-data';
+import _ from 'underscore';
 
 const AppView = Backbone.View.extend({
   el: '.question',
@@ -11,6 +12,11 @@ const AppView = Backbone.View.extend({
     'click .next': 'getNext'
   },
 
+  getRandomQuestions(questions, quantity) {
+    const questionsQuantity = quantity || questions.length;
+    return _.shuffle(questions).slice(0, questionsQuantity);
+  },
+
   initialize() {
     this.questionIndex = 0;
 
@@ -18,7 +24,7 @@ const AppView = Backbone.View.extend({
     this.$next = this.$('#next-button');
     this.$finish = this.$('#finish-button');
 
-    this.questionList = new QuestionList(questionListData);
+    this.questionList = new QuestionList(this.getRandomQuestions(questionListData, 10));
 
     this.questionMaxIndex = this.questionList.size() - 1;
     this.render();

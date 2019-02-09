@@ -3,7 +3,7 @@ import AnswerList from '../collections/answer-list';
 const questionListData = [
   {
     name: '1',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: '¿Qué describe la sigla OSI?',
     multiple: false,
     answersList: new AnswerList([
@@ -27,7 +27,7 @@ const questionListData = [
   },
   {
     name: '2',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: '¿En qué año nace el modelo OSI?',
     multiple: false,
     answersList: new AnswerList([
@@ -51,9 +51,9 @@ const questionListData = [
   },
   {
     name: '3',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: '¿Cuál es la causa de hacer un modelo OSI?',
-    multiple: true,
+    multiple: false,
     answersList: new AnswerList([
       {
         description:
@@ -76,7 +76,7 @@ const questionListData = [
   },
   {
     name: '4',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: '¿Qué es un proceso punto a punto?',
     multiple: false,
     answersList: new AnswerList([
@@ -101,7 +101,7 @@ const questionListData = [
   },
   {
     name: '5',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: 'Función de los 7 niveles del modelo OSI:',
     multiple: false,
     answersList: new AnswerList([
@@ -126,7 +126,7 @@ const questionListData = [
   },
   {
     name: '6',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: '¿Cada nivel funciona de forma independiente?',
     multiple: false,
     answersList: new AnswerList([
@@ -150,7 +150,7 @@ const questionListData = [
   },
   {
     name: '7',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: '¿Qué es el PDU?',
     multiple: false,
     answersList: new AnswerList([
@@ -174,7 +174,7 @@ const questionListData = [
   },
   {
     name: '8',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: '¿Para qué sirve el PDU?',
     multiple: false,
     answersList: new AnswerList([
@@ -199,7 +199,7 @@ const questionListData = [
   },
   {
     name: '9',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: '¿Cómo se llama la PDU de la capa de enlace de datos?',
     multiple: false,
     answersList: new AnswerList([
@@ -223,7 +223,7 @@ const questionListData = [
   },
   {
     name: '10',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: '¿Cómo se llama la PDU de la capa de red?',
     multiple: false,
     answersList: new AnswerList([
@@ -247,7 +247,7 @@ const questionListData = [
   },
   {
     name: '11',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: '¿Cómo se llama la PDU de la capa transporte?',
     multiple: false,
     answersList: new AnswerList([
@@ -271,9 +271,9 @@ const questionListData = [
   },
   {
     name: '12',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: '¿Qué hace el nivel Física?',
-    multiple: true,
+    multiple: false,
     answersList: new AnswerList([
       {
         description: 'Permite que los usuarios accedan a la red.',
@@ -296,7 +296,7 @@ const questionListData = [
   },
   {
     name: '13',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: '¿De qué se encarga el nivel físico?',
     multiple: false,
     answersList: new AnswerList([
@@ -321,7 +321,7 @@ const questionListData = [
   },
   {
     name: '14',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: 'Una característica del nivel físico es:',
     multiple: false,
     answersList: new AnswerList([
@@ -346,7 +346,7 @@ const questionListData = [
   },
   {
     name: '15',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: '¿Protocolos del nivel físico son?',
     multiple: false,
     answersList: new AnswerList([
@@ -370,7 +370,7 @@ const questionListData = [
   },
   {
     name: '16',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: 'El nivel Físico específica...',
     multiple: false,
     answersList: new AnswerList([
@@ -394,7 +394,7 @@ const questionListData = [
   },
   {
     name: '17',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: '¿Qué hace el nivel de enlace de datos?',
     multiple: false,
     answersList: new AnswerList([
@@ -421,7 +421,7 @@ const questionListData = [
   },
   {
     name: '18',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: 'Una función del nivel de enlace de datos:',
     multiple: false,
     answersList: new AnswerList([
@@ -447,7 +447,7 @@ const questionListData = [
   },
   {
     name: '19',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: 'El nivel de Enlace de datos es responsable de...',
     multiple: false,
     answersList: new AnswerList([
@@ -472,7 +472,7 @@ const questionListData = [
   },
   {
     name: '20',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: 'Dentro de las funciones de enlace de datos esta:',
     multiple: false,
     answersList: new AnswerList([
@@ -497,9 +497,9 @@ const questionListData = [
   },
   {
     name: '21',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: 'EL nivel de enlace permite...',
-    multiple: true,
+    multiple: false,
     answersList: new AnswerList([
       {
         description: 'Dividir las tramas en segmentos más pequeños.',
@@ -522,7 +522,7 @@ const questionListData = [
   },
   {
     name: '22',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: '¿Qué hace el nivel de red?',
     multiple: false,
     answersList: new AnswerList([
@@ -547,7 +547,7 @@ const questionListData = [
   },
   {
     name: '23',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: 'El nivel de red es responsable de:',
     multiple: false,
     answersList: new AnswerList([
@@ -572,7 +572,7 @@ const questionListData = [
   },
   {
     name: '24',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: 'Por medio del nivel de red podemos identificar...',
     multiple: false,
     answersList: new AnswerList([
@@ -597,7 +597,7 @@ const questionListData = [
   },
   {
     name: '25',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: '¿El nivel de red permite reestructurar tramas?',
     multiple: false,
     answersList: new AnswerList([
@@ -622,7 +622,7 @@ const questionListData = [
   },
   {
     name: '26',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: '¿La númeración de la red debe ser uniforme?',
     multiple: false,
     answersList: new AnswerList([
@@ -646,7 +646,7 @@ const questionListData = [
   },
   {
     name: '26',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: '¿La numeración de la red debe ser uniforme?',
     multiple: false,
     answersList: new AnswerList([
@@ -670,7 +670,7 @@ const questionListData = [
   },
   {
     name: '27',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: '¿Que hace el nivel de transporte?',
     multiple: false,
     answersList: new AnswerList([
@@ -694,7 +694,7 @@ const questionListData = [
   },
   {
     name: '28',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: '¿El nivel de transporte garantiza que?',
     multiple: false,
     answersList: new AnswerList([
@@ -719,7 +719,7 @@ const questionListData = [
   },
   {
     name: '29',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description:
       '¿ El nivel de transporte separa las capas de nivel de aplicación?',
     multiple: false,
@@ -744,7 +744,7 @@ const questionListData = [
   },
   {
     name: '30',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: '¿ El nivel de transporte separa las capas de nivel físico?',
     multiple: false,
     answersList: new AnswerList([
@@ -768,7 +768,7 @@ const questionListData = [
   },
   {
     name: '31',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: '¿ Un protocolo orientado a la conexión es?',
     multiple: false,
     answersList: new AnswerList([
@@ -792,7 +792,7 @@ const questionListData = [
   },
   {
     name: '32',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: '¿ Un protocolo no orientado a la conexión es?',
     multiple: false,
     answersList: new AnswerList([
@@ -816,7 +816,7 @@ const questionListData = [
   },
   {
     name: '33',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: '¿ Que hace el nivel de sesión?',
     multiple: false,
     answersList: new AnswerList([
@@ -841,7 +841,7 @@ const questionListData = [
   },
   {
     name: '34',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: '¿ Que hace el nivel de presentación?',
     multiple: false,
     answersList: new AnswerList([
@@ -867,7 +867,7 @@ const questionListData = [
   },
   {
     name: '35',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: '¿ Que hace el nivel de aplicación?',
     multiple: false,
     answersList: new AnswerList([
@@ -892,7 +892,7 @@ const questionListData = [
   },
   {
     name: '36',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description:
       '¿ Cuál es la capa del modelo OSI que proporciona envió de datos, clase de servicio e informe de excepciones?',
     multiple: false,
@@ -917,7 +917,7 @@ const questionListData = [
   },
   {
     name: '37',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description:
       '¿ Cuál de las siguientes opciones describe mejor la función de la capa de presentación?',
     multiple: false,
@@ -946,7 +946,7 @@ const questionListData = [
   },
   {
     name: '38',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description:
       '¿ En este nivel de presentan problemas de cableado, conexiones, energía etc.?',
     multiple: false,
@@ -971,7 +971,7 @@ const questionListData = [
   },
   {
     name: '39',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: '¿ Estos dispositivos trabajan en el nivel de red?',
     multiple: false,
     answersList: new AnswerList([
@@ -995,7 +995,7 @@ const questionListData = [
   },
   {
     name: '40',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description:
       '¿ Seleccione en qué nivel puede estar un conflicto de direcciones IP?',
     multiple: false,
@@ -1020,7 +1020,7 @@ const questionListData = [
   },
   {
     name: '41',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: '¿ Selecciona el protocolo de enrutamiento de la capa de red?',
     multiple: false,
     answersList: new AnswerList([
@@ -1044,7 +1044,7 @@ const questionListData = [
   },
   {
     name: '42',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: '¿ A qué nivel del modelo OSI pertenece CSMA/CD?',
     multiple: false,
     answersList: new AnswerList([
@@ -1068,7 +1068,7 @@ const questionListData = [
   },
   {
     name: '43',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description:
       '¿ En el nivel de transporte los puertos lógicos junto con la capa red dan forma a los conocidos como?',
     multiple: false,
@@ -1093,7 +1093,7 @@ const questionListData = [
   },
   {
     name: '44',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: '¿ Protocolo de red no orientado a conexión?',
     multiple: false,
     answersList: new AnswerList([
@@ -1117,7 +1117,7 @@ const questionListData = [
   },
   {
     name: '45',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: '¿ Indica la respuesta FALSA sobre el nivel de sesión?',
     multiple: false,
     answersList: new AnswerList([
@@ -1142,7 +1142,7 @@ const questionListData = [
   },
   {
     name: '46',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: '¿ Indica la respuesta FALSA sobre el nivel de presentación?',
     multiple: false,
     answersList: new AnswerList([
@@ -1167,7 +1167,7 @@ const questionListData = [
   },
   {
     name: '47',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: '¿ Que hardware situarías en la capa física del modelo OSI?',
     multiple: false,
     answersList: new AnswerList([
@@ -1191,7 +1191,7 @@ const questionListData = [
   },
   {
     name: '48',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description:
       '¿ En la arquitectura OSI la detección de errores se lleva a cabo en el nivel?',
     multiple: false,
@@ -1216,7 +1216,7 @@ const questionListData = [
   },
   {
     name: '49',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description:
       '¿ El nivel encargado de establecer los puntos de sincronización para el diálogo entre terminales es?',
     multiple: false,
@@ -1241,7 +1241,7 @@ const questionListData = [
   },
   {
     name: '50',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: '¿ Cuando se habla de par trenzado se habla de nivel?',
     multiple: false,
     answersList: new AnswerList([
@@ -1265,7 +1265,7 @@ const questionListData = [
   },
   {
     name: '51',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: '¿ El nivel 6 corresponde a?',
     multiple: false,
     answersList: new AnswerList([
@@ -1289,7 +1289,7 @@ const questionListData = [
   },
   {
     name: '52',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description:
       '¿ Cuál de las siguientes opciones describe mejor la función de la capa de presentación?',
     multiple: false,
@@ -1318,7 +1318,7 @@ const questionListData = [
   },
   {
     name: '53',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description:
       '¿ Cuál es la capa que establece, administra y finaliza las sesiones entre dos hosts que se están comunicando?',
     multiple: false,
@@ -1343,7 +1343,7 @@ const questionListData = [
   },
   {
     name: '54',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: '¿ Dispositivo que opera en la capa Enlace de datos?',
     multiple: false,
     answersList: new AnswerList([
@@ -1367,7 +1367,7 @@ const questionListData = [
   },
   {
     name: '55',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description:
       '¿ Cuál de los siguientes protocolos usa UDO como protocolos subyacentes?',
     multiple: false,
@@ -1392,7 +1392,7 @@ const questionListData = [
   },
   {
     name: '56',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description:
       '¿ Establece, administra y finaliza las sesiones entre dos hosts que se están comunicando?',
     multiple: false,
@@ -1417,7 +1417,7 @@ const questionListData = [
   },
   {
     name: '57',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: '¿ La capa de sesión surge como una forma de?',
     multiple: false,
     answersList: new AnswerList([
@@ -1442,7 +1442,7 @@ const questionListData = [
   },
   {
     name: '58',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description:
       '¿ Cuál es la capa del modelo OSI que proporciona conectividad y selección de rutas entre dos sistemas finales donde se produce el enrutamiento?',
     multiple: false,
@@ -1467,7 +1467,7 @@ const questionListData = [
   },
   {
     name: '59',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description:
       '¿ Cuál de las siguientes opciones describe mejor la función de la capa de presentación?',
     multiple: false,
@@ -1496,7 +1496,7 @@ const questionListData = [
   },
   {
     name: '60',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description:
       '¿ Los procesos de comunicación son dividíos en capas ¿Cuantas son?',
     multiple: false,
@@ -1521,7 +1521,7 @@ const questionListData = [
   },
   {
     name: '61',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: '¿ Funciones de la capa de Sesión?',
     multiple: false,
     answersList: new AnswerList([
@@ -1546,7 +1546,7 @@ const questionListData = [
   },
   {
     name: '62',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: '¿ Ejemplos de la capa de aplicación?',
     multiple: false,
     answersList: new AnswerList([
@@ -1570,7 +1570,7 @@ const questionListData = [
   },
   {
     name: '63',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description:
       '¿ Cuál es la capa del Modelo OSI que proporciona envío de datos, clase de servicio e informe de excepciones?',
     multiple: false,
@@ -1595,7 +1595,7 @@ const questionListData = [
   },
   {
     name: '64',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: '¿ Cual es una de las ventajas del modelo OSI?',
     multiple: false,
     answersList: new AnswerList([
@@ -1621,7 +1621,7 @@ const questionListData = [
   },
   {
     name: '65',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: '¿ Las siglas LAN significan?',
     multiple: false,
     answersList: new AnswerList([
@@ -1645,7 +1645,7 @@ const questionListData = [
   },
   {
     name: '66',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: '¿ Qué es una red LAN?',
     multiple: false,
     answersList: new AnswerList([
@@ -1670,7 +1670,7 @@ const questionListData = [
   },
   {
     name: '67',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: '¿ Un Router en el modelo OSI?',
     multiple: false,
     answersList: new AnswerList([
@@ -1694,7 +1694,7 @@ const questionListData = [
   },
   {
     name: '68',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: '¿ En qué capa OSI ubicamos los cables UTP?',
     multiple: false,
     answersList: new AnswerList([
@@ -1718,7 +1718,7 @@ const questionListData = [
   },
   {
     name: '69',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description: '¿ Qué es un HUB?',
     multiple: false,
     answersList: new AnswerList([
@@ -1742,7 +1742,7 @@ const questionListData = [
   },
   {
     name: '70',
-    image: 'https://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/tech',
     description:
       '¿ En cuales dos subcapas se divide la capa de enlace del modelo OSI?',
     multiple: false,

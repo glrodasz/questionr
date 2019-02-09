@@ -8,23 +8,7 @@ const Question = Backbone.Model.extend({
     image: null,
     description: '',
     multiple: false,
-    answersList: new AnswerList([
-      {
-        description: 'Black',
-        value: 0,
-        checked: false
-      },
-      {
-        description: 'White',
-        value: 0,
-        checked: false
-      },
-      {
-        description: 'Yellow',
-        value: 0,
-        checked: false
-      }
-    ])
+    answersList: new AnswerList([])
   },
 
   initialize(options) {
